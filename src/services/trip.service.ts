@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class TripService {
   trip: any;
+  selected: any;
 
   constructor(){
 
@@ -14,6 +15,14 @@ export class TripService {
 
   getTrip() {
     return this.trip;
+  }
+
+  getSelected() {
+    return this.selected;
+  }
+
+  setSelected(selected) {
+    this.selected = selected;
   }
 
 

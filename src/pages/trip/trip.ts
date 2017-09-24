@@ -2,6 +2,10 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { FlightService } from '../../services/flight.service';
 import { TripService } from '../../services/trip.service';
+import { PopoverController } from 'ionic-angular';
+import { AfoodPage } from '../afood/afood'
+import { AttractPage } from '../attract/attract';
+import { BreakfPage } from '../breakf/breakf';
 
 @Component({
   selector: 'page-trip',
@@ -14,7 +18,7 @@ export class TripPage {
   selectedDay: any[] = [];
   i: any;
 
-  constructor(private tripService: TripService, public navCtrl: NavController) {
+  constructor(public popoverCtrl: PopoverController, private tripService: TripService, public navCtrl: NavController) {
 
   }
 
@@ -23,6 +27,30 @@ export class TripPage {
     this.getDates();
     this.getSelected();
     this.i = 0;
+  }
+
+  viewBreakfast(ev, place) {
+    this.tripService.setSelected(place);
+    let popover = this.popoverCtrl.create(BreakfPage);
+    popover.present({
+      ev: ev
+    });
+  }
+
+  viewAttraction(ev, place) {
+    this.tripService.setSelected(place);
+    let popover = this.popoverCtrl.create(AttractPage);
+    popover.present({
+      ev: ev
+    });
+  }
+
+  viewAfood(ev, place) {
+    this.tripService.setSelected(place);
+    let popover = this.popoverCtrl.create(AfoodPage);
+    popover.present({
+      ev: ev
+    });
   }
 
   ionViewWillEnter() {

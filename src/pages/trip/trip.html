@@ -27,7 +27,7 @@
       Breakfast
     </ion-card-header>
 
-    <ion-item *ngFor="let place of trip[i].breakfast">
+    <ion-item *ngFor="let place of trip[i].breakfast" (click)="viewBreakfast($event, place)">
       <h2>{{place.name}}</h2>
       <p item-end>{{place.price}}</p>
     </ion-item>
@@ -39,7 +39,7 @@
       Attractions
     </ion-card-header>
 
-    <ion-item *ngFor="let place of trip[i].attraction1">
+    <ion-item *ngFor="let place of trip[i].attraction1" (click)="viewAttraction($event, place)">
       <h2>{{place.venue.name}}</h2>
       <!-- <p item-end>{{place.venue.price.currency}}</p> -->
     </ion-item>
@@ -51,7 +51,7 @@
       Lunch
     </ion-card-header>
 
-    <ion-item *ngFor="let place of trip[i].lunch">
+    <ion-item *ngFor="let place of trip[i].lunch" (click)="viewAfood($event, place)">
       <h2>{{place.business.name}}</h2>
       <p item-end>{{place.business.price}}</p>
     </ion-item>
@@ -63,7 +63,7 @@
       Dinner
     </ion-card-header>
 
-    <ion-item *ngFor="let place of trip[i].dinner">
+    <ion-item *ngFor="let place of trip[i].dinner" (click)="viewAfood($event, place)">
       <h2>{{place.business.name}}</h2>
       <p item-end>{{place.business.price}}</p>
     </ion-item>
@@ -75,7 +75,7 @@
       Night Life
     </ion-card-header>
 
-    <ion-item *ngFor="let place of trip[i].attraction2">
+    <ion-item *ngFor="let place of trip[i].attraction2" (click)="viewAttraction($event, place)">
       <h2>{{place.venue.name}}</h2>
       <!-- <p item-end>{{place.venue.price}}</p> -->
     </ion-item>

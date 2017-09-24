@@ -6,6 +6,9 @@ import { MyApp } from './app.component';
 import { TripPage } from '../pages/trip/trip';
 import { FlightsPage } from '../pages/flights/flights';
 import { TabsPage } from '../pages/tabs/tabs';
+import { AfoodPage } from '../pages/afood/afood';
+import { AttractPage } from '../pages/attract/attract';
+import { BreakfPage } from '../pages/breakf/breakf';
 import { FlightService } from '../services/flight.service';
 import { TripService } from '../services/trip.service';
 import { StatusBar } from '@ionic-native/status-bar';
@@ -19,7 +22,10 @@ import { HttpModule } from '@angular/http';
     TripPage,
     FlightsPage,
     TabsPage,
-    StartPage
+    StartPage,
+    AfoodPage,
+    BreakfPage,
+    AttractPage
   ],
   imports: [
     BrowserModule,
@@ -32,7 +38,10 @@ import { HttpModule } from '@angular/http';
     TripPage,
     FlightsPage,
     TabsPage,
-    StartPage
+    StartPage,
+    AfoodPage,
+    BreakfPage,
+    AttractPage
   ],
   providers: [
     StatusBar,
