@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Itinera</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card *ngFor="let flight of flights; let i = index" [attr.data-index]="i">
+
+    <ion-card-header style="padding:0 !important; margin:0!important; padding-left: 15px !important;">
+      <ion-item no-padding >
+        Flight Package {{i + 1}}
+        <div item-end style="text-align: right">${{flight.saleTotal.substring(3)}}</div>
+      </ion-item>
+    </ion-card-header>
+
+    <ion-item>
+      <ion-icon name="plane" item-start large></ion-icon>
+      <h2>{{flight.slice[0].segment[0].leg[0].origin}} - {{flight.slice[0].segment[0].leg[0].destination}}</h2>
+      <p>{{ dates[i].month }} {{ dates[i].day }}, {{ dates[i].year }} - {{ dates[i].time }}</p>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon name="plane" item-left large></ion-icon>
+      <h2>{{flight.slice[1].segment[0].leg[0].origin}} - {{flight.slice[1].segment[0].leg[0].destination}}</h2>
+      <p>{{ dates2[i].month }} {{ dates2[i].day }}, {{ dates2[i].year }} - {{ dates2[i].time }}</p>
+    </ion-item>
+
+  </ion-card>
+
+</ion-content>

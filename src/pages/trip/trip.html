@@ -1,0 +1,85 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Itinera
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+
+  <ion-grid class="week-calendar" style="overflow-x: auto; white-space:nowrap; width: 30em; display: inline-block">
+    <ion-row nowrap style="text-align: center">
+      <ion-col *ngFor="let date of dates" col-2 text-center class="date" (click)="changeDate(date)">
+        <div class="dayback">
+          <p class="day">{{date.month}}</p>
+        </div>
+        <p class="month">{{date.year}}</p>
+        <p class="day-number">{{date.day}}</p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-card>
+
+    <ion-card-header>
+      Breakfast
+    </ion-card-header>
+
+    <ion-item *ngFor="let place of trip[i].breakfast">
+      <h2>{{place.name}}</h2>
+      <p item-end>{{place.price}}</p>
+    </ion-item>
+  </ion-card>
+
+  <ion-card>
+
+    <ion-card-header>
+      Attractions
+    </ion-card-header>
+
+    <ion-item *ngFor="let place of trip[i].attraction1">
+      <h2>{{place.venue.name}}</h2>
+      <!-- <p item-end>{{place.venue.price.currency}}</p> -->
+    </ion-item>
+  </ion-card>
+
+  <ion-card>
+
+    <ion-card-header>
+      Lunch
+    </ion-card-header>
+
+    <ion-item *ngFor="let place of trip[i].lunch">
+      <h2>{{place.business.name}}</h2>
+      <p item-end>{{place.business.price}}</p>
+    </ion-item>
+  </ion-card>
+
+  <ion-card>
+
+    <ion-card-header>
+      Dinner
+    </ion-card-header>
+
+    <ion-item *ngFor="let place of trip[i].dinner">
+      <h2>{{place.business.name}}</h2>
+      <p item-end>{{place.business.price}}</p>
+    </ion-item>
+  </ion-card>
+
+  <ion-card>
+
+    <ion-card-header>
+      Night Life
+    </ion-card-header>
+
+    <ion-item *ngFor="let place of trip[i].attraction2">
+      <h2>{{place.venue.name}}</h2>
+      <!-- <p item-end>{{place.venue.price}}</p> -->
+    </ion-item>
+  </ion-card>
+
+
+</ion-content>

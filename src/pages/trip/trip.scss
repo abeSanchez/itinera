@@ -1,0 +1,46 @@
+page-trip {
+
+  .week-calendar {
+
+      height: 66px;
+
+      .date {
+        height: 55px;
+        width: 5px;
+        border-style: groove;
+        border-width: 0.5px;
+        border-radius: 3px;
+        padding-left: 0;
+        padding-right: 0;
+
+        .dayback {
+          background-color: #eee;
+          width: 100%;
+        }
+
+        .day {
+          width: 100%;
+          margin-top: -5px;
+          padding: 0;
+        }
+
+        .month {
+          font-size: 11px;
+          margin-top: 1px;
+        }
+
+        .day-number {
+          font-size: 21px;
+          margin-top: -1px;
+          color: grey;
+        }
+
+      }
+
+      p {
+        margin: 0;
+      }
+
+    }
+
+}
