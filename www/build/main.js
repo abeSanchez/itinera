@@ -40,12 +40,12 @@ webpackEmptyAsyncContext.id = 150;
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return StartPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(29);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__tabs_tabs__ = __webpack_require__(195);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_flight_service__ = __webpack_require__(99);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_trip_service__ = __webpack_require__(31);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_http__ = __webpack_require__(201);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_map__ = __webpack_require__(270);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_trip_service__ = __webpack_require__(98);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_http__ = __webpack_require__(198);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_map__ = __webpack_require__(267);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_map__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -113,7 +113,7 @@ StartPage = __decorate([
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TabsPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__trip_trip__ = __webpack_require__(196);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__flights_flights__ = __webpack_require__(200);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__flights_flights__ = __webpack_require__(197);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -149,11 +149,11 @@ TabsPage = __decorate([
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TripPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_trip_service__ = __webpack_require__(31);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__afood_afood__ = __webpack_require__(197);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__attract_attract__ = __webpack_require__(198);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__breakf_breakf__ = __webpack_require__(199);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_trip_service__ = __webpack_require__(98);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__afood_afood__ = __webpack_require__(268);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__attract_attract__ = __webpack_require__(272);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__breakf_breakf__ = __webpack_require__(270);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -285,7 +285,7 @@ var TripPage = (function () {
 }());
 TripPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-trip',template:/*ion-inline-start:"C:\Users\Abe\itin-app\src\pages\trip\trip.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Itinera\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n\n\n  <ion-grid class="week-calendar" style="overflow-x: auto; white-space:nowrap; width: 30em; display: inline-block">\n    <ion-row nowrap style="text-align: center">\n      <ion-col *ngFor="let date of dates" col-2 text-center class="date" (click)="changeDate(date)">\n        <div class="dayback">\n          <p class="day">{{date.month}}</p>\n        </div>\n        <p class="month">{{date.year}}</p>\n        <p class="day-number">{{date.day}}</p>\n      </ion-col>\n    </ion-row>\n  </ion-grid>\n\n  <ion-card>\n\n    <ion-card-header>\n      Breakfast\n    </ion-card-header>\n\n    <ion-item *ngFor="let place of trip[i].breakfast" (click)="viewBreakfast($event, place)">\n      <h2>{{place.name}}</h2>\n      <p item-end>{{place.price}}</p>\n    </ion-item>\n  </ion-card>\n\n  <ion-card>\n\n    <ion-card-header>\n      Attractions\n    </ion-card-header>\n\n    <ion-item *ngFor="let place of trip[i].attraction1" (click)="viewAttraction($event, place)">\n      <h2>{{place.venue.name}}</h2>\n      <!-- <p item-end>{{place.venue.price.currency}}</p> -->\n    </ion-item>\n  </ion-card>\n\n  <ion-card>\n\n    <ion-card-header>\n      Lunch\n    </ion-card-header>\n\n    <ion-item *ngFor="let place of trip[i].lunch" (click)="viewAfood($event, place)">\n      <h2>{{place.business.name}}</h2>\n      <p item-end>{{place.business.price}}</p>\n    </ion-item>\n  </ion-card>\n\n  <ion-card>\n\n    <ion-card-header>\n      Dinner\n    </ion-card-header>\n\n    <ion-item *ngFor="let place of trip[i].dinner" (click)="viewAfood($event, place)">\n      <h2>{{place.business.name}}</h2>\n      <p item-end>{{place.business.price}}</p>\n    </ion-item>\n  </ion-card>\n\n  <ion-card>\n\n    <ion-card-header>\n      Night Life\n    </ion-card-header>\n\n    <ion-item *ngFor="let place of trip[i].attraction2" (click)="viewAttraction($event, place)">\n      <h2>{{place.venue.name}}</h2>\n      <!-- <p item-end>{{place.venue.price}}</p> -->\n    </ion-item>\n  </ion-card>\n\n\n</ion-content>\n'/*ion-inline-end:"C:\Users\Abe\itin-app\src\pages\trip\trip.html"*/
+        selector: 'page-trip',template:/*ion-inline-start:"C:\Users\Abe\itin-app\src\pages\trip\trip.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Advent\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n\n\n  <ion-grid class="week-calendar" style="overflow-x: auto; white-space:nowrap; width: 30em; display: inline-block">\n    <ion-row nowrap style="text-align: center">\n      <ion-col *ngFor="let date of dates" col-2 text-center class="date" (click)="changeDate(date)">\n        <div class="dayback">\n          <p class="day">{{date.month}}</p>\n        </div>\n        <p class="month">{{date.year}}</p>\n        <p class="day-number">{{date.day}}</p>\n      </ion-col>\n    </ion-row>\n  </ion-grid>\n\n  <ion-card>\n\n    <ion-card-header>\n      Breakfast\n    </ion-card-header>\n\n    <ion-item *ngFor="let place of trip[i].breakfast" (click)="viewBreakfast($event, place)">\n      <h2>{{place.name}}</h2>\n      <p item-end>{{place.price}}</p>\n    </ion-item>\n  </ion-card>\n\n  <ion-card>\n\n    <ion-card-header>\n      Attractions\n    </ion-card-header>\n\n    <ion-item *ngFor="let place of trip[i].attraction1" (click)="viewAttraction($event, place)">\n      <h2>{{place.venue.name}}</h2>\n      <!-- <p item-end>{{place.venue.price.currency}}</p> -->\n    </ion-item>\n  </ion-card>\n\n  <ion-card>\n\n    <ion-card-header>\n      Lunch\n    </ion-card-header>\n\n    <ion-item *ngFor="let place of trip[i].lunch" (click)="viewAfood($event, place)">\n      <h2>{{place.business.name}}</h2>\n      <p item-end>{{place.business.price}}</p>\n    </ion-item>\n  </ion-card>\n\n  <ion-card>\n\n    <ion-card-header>\n      Dinner\n    </ion-card-header>\n\n    <ion-item *ngFor="let place of trip[i].dinner" (click)="viewAfood($event, place)">\n      <h2>{{place.business.name}}</h2>\n      <p item-end>{{place.business.price}}</p>\n    </ion-item>\n  </ion-card>\n\n  <ion-card>\n\n    <ion-card-header>\n      Night Life\n    </ion-card-header>\n\n    <ion-item *ngFor="let place of trip[i].attraction2" (click)="viewAttraction($event, place)">\n      <h2>{{place.venue.name}}</h2>\n      <!-- <p item-end>{{place.venue.price}}</p> -->\n    </ion-item>\n  </ion-card>\n\n\n</ion-content>\n'/*ion-inline-end:"C:\Users\Abe\itin-app\src\pages\trip\trip.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* PopoverController */], __WEBPACK_IMPORTED_MODULE_2__services_trip_service__["a" /* TripService */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]])
 ], TripPage);
@@ -298,138 +298,9 @@ TripPage = __decorate([
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AfoodPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_trip_service__ = __webpack_require__(31);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-var AfoodPage = (function () {
-    function AfoodPage(tripService, navCtrl, navParams) {
-        this.tripService = tripService;
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-    }
-    AfoodPage.prototype.ionViewCanEnter = function () {
-        this.place = this.tripService.getSelected();
-        console.log(this.place);
-    };
-    return AfoodPage;
-}());
-AfoodPage = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-afood',template:/*ion-inline-start:"C:\Users\Abe\itin-app\src\pages\afood\afood.html"*/'<ion-content>\n\n<img src="{{place.business.image_url}}" />\n\n<h2>{{place.business.name}}</h2>\n<ion-note style="padding-bottom:20px">{{place.business.location.address1}} | {{place.business.phone}}</ion-note>\n\n</ion-content>\n'/*ion-inline-end:"C:\Users\Abe\itin-app\src\pages\afood\afood.html"*/,
-    }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__services_trip_service__["a" /* TripService */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavParams */]])
-], AfoodPage);
-
-//# sourceMappingURL=afood.js.map
-
-/***/ }),
-
-/***/ 198:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AttractPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_trip_service__ = __webpack_require__(31);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-var AttractPage = (function () {
-    function AttractPage(tripService, navCtrl, navParams) {
-        this.tripService = tripService;
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-    }
-    AttractPage.prototype.ionViewCanEnter = function () {
-        this.place = this.tripService.getSelected();
-        console.log(this.place);
-    };
-    return AttractPage;
-}());
-AttractPage = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-attract',template:/*ion-inline-start:"C:\Users\Abe\itin-app\src\pages\attract\attract.html"*/'\n\n\n<ion-content>\n\n  <img src="{{place.venue.photo_url}}" />\n\n  <h2>{{place.venue.name}}</h2>\n  <ion-note style="padding-bottom:20px">{{place.venue.location.address}} | {{place.venue.contact.phone}}</ion-note>\n\n\n</ion-content>\n'/*ion-inline-end:"C:\Users\Abe\itin-app\src\pages\attract\attract.html"*/,
-    }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__services_trip_service__["a" /* TripService */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavParams */]])
-], AttractPage);
-
-//# sourceMappingURL=attract.js.map
-
-/***/ }),
-
-/***/ 199:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BreakfPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_trip_service__ = __webpack_require__(31);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-var BreakfPage = (function () {
-    function BreakfPage(tripService, navCtrl, navParams) {
-        this.tripService = tripService;
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-    }
-    BreakfPage.prototype.ionViewCanEnter = function () {
-        this.place = this.tripService.getSelected();
-        console.log(this.place);
-    };
-    return BreakfPage;
-}());
-BreakfPage = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-breakf',template:/*ion-inline-start:"C:\Users\Abe\itin-app\src\pages\breakf\breakf.html"*/'<ion-content>\n\n  <img src="{{place.image_url}}" />\n\n  <h2>{{place.name}}</h2>\n  <ion-note style="padding-bottom:20px">{{place.location.address1}} | {{place.phone}}</ion-note>\n\n\n</ion-content>\n'/*ion-inline-end:"C:\Users\Abe\itin-app\src\pages\breakf\breakf.html"*/,
-    }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__services_trip_service__["a" /* TripService */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavParams */]])
-], BreakfPage);
-
-//# sourceMappingURL=breakf.js.map
-
-/***/ }),
-
-/***/ 200:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FlightsPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(29);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_flight_service__ = __webpack_require__(99);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -551,7 +422,7 @@ var FlightsPage = (function () {
 }());
 FlightsPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-flights',template:/*ion-inline-start:"C:\Users\Abe\itin-app\src\pages\flights\flights.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>Itinera</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n\n  <ion-card *ngFor="let flight of flights; let i = index" [attr.data-index]="i">\n\n    <ion-card-header style="padding:0 !important; margin:0!important; padding-left: 15px !important;">\n      <ion-item no-padding >\n        Flight Package {{i + 1}}\n        <div item-end style="text-align: right">${{flight.saleTotal.substring(3)}}</div>\n      </ion-item>\n    </ion-card-header>\n\n    <ion-item>\n      <ion-icon name="plane" item-start large></ion-icon>\n      <h2>{{flight.slice[0].segment[0].leg[0].origin}} - {{flight.slice[0].segment[0].leg[0].destination}}</h2>\n      <p>{{ dates[i].month }} {{ dates[i].day }}, {{ dates[i].year }} - {{ dates[i].time }}</p>\n    </ion-item>\n\n    <ion-item>\n      <ion-icon name="plane" item-left large></ion-icon>\n      <h2>{{flight.slice[1].segment[0].leg[0].origin}} - {{flight.slice[1].segment[0].leg[0].destination}}</h2>\n      <p>{{ dates2[i].month }} {{ dates2[i].day }}, {{ dates2[i].year }} - {{ dates2[i].time }}</p>\n    </ion-item>\n\n  </ion-card>\n\n</ion-content>\n'/*ion-inline-end:"C:\Users\Abe\itin-app\src\pages\flights\flights.html"*/
+        selector: 'page-flights',template:/*ion-inline-start:"C:\Users\Abe\itin-app\src\pages\flights\flights.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>Advent</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n\n  <ion-card *ngFor="let flight of flights; let i = index" [attr.data-index]="i">\n\n    <ion-card-header style="padding:0 !important; margin:0!important; padding-left: 15px !important;">\n      <ion-item no-padding >\n        Flight Package {{i + 1}}\n        <div item-end style="text-align: right">${{flight.saleTotal.substring(3)}}</div>\n      </ion-item>\n    </ion-card-header>\n\n    <ion-item>\n      <ion-icon name="plane" item-start large></ion-icon>\n      <h2>{{flight.slice[0].segment[0].leg[0].origin}} - {{flight.slice[0].segment[0].leg[0].destination}}</h2>\n      <p>{{ dates[i].month }} {{ dates[i].day }}, {{ dates[i].year }} - {{ dates[i].time }}</p>\n    </ion-item>\n\n    <ion-item>\n      <ion-icon name="plane" item-left large></ion-icon>\n      <h2>{{flight.slice[1].segment[0].leg[0].origin}} - {{flight.slice[1].segment[0].leg[0].destination}}</h2>\n      <p>{{ dates2[i].month }} {{ dates2[i].day }}, {{ dates2[i].year }} - {{ dates2[i].time }}</p>\n    </ion-item>\n\n  </ion-card>\n\n</ion-content>\n'/*ion-inline-end:"C:\Users\Abe\itin-app\src\pages\flights\flights.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__services_flight_service__["a" /* FlightService */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]])
 ], FlightsPage);
@@ -560,13 +431,13 @@ FlightsPage = __decorate([
 
 /***/ }),
 
-/***/ 202:
+/***/ 199:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(203);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(221);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(200);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(218);
 
 
 Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
@@ -574,27 +445,27 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 
 /***/ }),
 
-/***/ 221:
+/***/ 218:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(25);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__(261);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__(258);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_trip_trip__ = __webpack_require__(196);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_flights_flights__ = __webpack_require__(200);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_flights_flights__ = __webpack_require__(197);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_tabs_tabs__ = __webpack_require__(195);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_afood_afood__ = __webpack_require__(197);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_attract_attract__ = __webpack_require__(198);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_breakf_breakf__ = __webpack_require__(199);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_afood_afood__ = __webpack_require__(268);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_attract_attract__ = __webpack_require__(272);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_breakf_breakf__ = __webpack_require__(270);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__services_flight_service__ = __webpack_require__(99);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__services_trip_service__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__services_trip_service__ = __webpack_require__(98);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__ionic_native_status_bar__ = __webpack_require__(190);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__ionic_native_splash_screen__ = __webpack_require__(193);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_start_start__ = __webpack_require__(194);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__angular_http__ = __webpack_require__(201);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__angular_http__ = __webpack_require__(198);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -664,13 +535,13 @@ AppModule = __decorate([
 
 /***/ }),
 
-/***/ 261:
+/***/ 258:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(29);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(190);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(193);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_start_start__ = __webpack_require__(194);
@@ -710,7 +581,136 @@ MyApp = __decorate([
 
 /***/ }),
 
-/***/ 31:
+/***/ 268:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AfoodPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_trip_service__ = __webpack_require__(98);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var AfoodPage = (function () {
+    function AfoodPage(tripService, navCtrl, navParams) {
+        this.tripService = tripService;
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+    }
+    AfoodPage.prototype.ionViewCanEnter = function () {
+        this.place = this.tripService.getSelected();
+        console.log(this.place);
+    };
+    return AfoodPage;
+}());
+AfoodPage = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+        selector: 'page-afood',template:/*ion-inline-start:"C:\Users\Abe\itin-app\src\pages\afood\afood.html"*/'<ion-content>\n\n<img src="{{place.business.image_url}}" />\n\n<h2>{{place.business.name}}</h2>\n<ion-note style="padding-bottom:20px">{{place.business.location.address1}} | {{place.business.phone}}</ion-note>\n\n</ion-content>\n'/*ion-inline-end:"C:\Users\Abe\itin-app\src\pages\afood\afood.html"*/,
+    }),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__services_trip_service__["a" /* TripService */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavParams */]])
+], AfoodPage);
+
+//# sourceMappingURL=afood.js.map
+
+/***/ }),
+
+/***/ 270:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BreakfPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_trip_service__ = __webpack_require__(98);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var BreakfPage = (function () {
+    function BreakfPage(tripService, navCtrl, navParams) {
+        this.tripService = tripService;
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+    }
+    BreakfPage.prototype.ionViewCanEnter = function () {
+        this.place = this.tripService.getSelected();
+        console.log(this.place);
+    };
+    return BreakfPage;
+}());
+BreakfPage = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+        selector: 'page-breakf',template:/*ion-inline-start:"C:\Users\Abe\itin-app\src\pages\breakf\breakf.html"*/'<ion-content>\n\n  <img src="{{place.image_url}}" />\n\n  <h2>{{place.name}}</h2>\n  <ion-note style="padding-bottom:20px">{{place.location.address1}} | {{place.phone}}</ion-note>\n\n\n</ion-content>\n'/*ion-inline-end:"C:\Users\Abe\itin-app\src\pages\breakf\breakf.html"*/,
+    }),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__services_trip_service__["a" /* TripService */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavParams */]])
+], BreakfPage);
+
+//# sourceMappingURL=breakf.js.map
+
+/***/ }),
+
+/***/ 272:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AttractPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_trip_service__ = __webpack_require__(98);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var AttractPage = (function () {
+    function AttractPage(tripService, navCtrl, navParams) {
+        this.tripService = tripService;
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+    }
+    AttractPage.prototype.ionViewCanEnter = function () {
+        this.place = this.tripService.getSelected();
+        console.log(this.place);
+    };
+    return AttractPage;
+}());
+AttractPage = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+        selector: 'page-attract',template:/*ion-inline-start:"C:\Users\Abe\itin-app\src\pages\attract\attract.html"*/'\n\n\n<ion-content>\n\n  <img src="{{place.venue.photo_url}}" />\n\n  <h2>{{place.venue.name}}</h2>\n  <ion-note style="padding-bottom:20px">{{place.venue.location.address}} | {{place.venue.contact.phone}}</ion-note>\n\n\n</ion-content>\n'/*ion-inline-end:"C:\Users\Abe\itin-app\src\pages\attract\attract.html"*/,
+    }),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__services_trip_service__["a" /* TripService */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavParams */]])
+], AttractPage);
+
+//# sourceMappingURL=attract.js.map
+
+/***/ }),
+
+/***/ 98:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -788,5 +788,5 @@ FlightService = __decorate([
 
 /***/ })
 
-},[202]);
+},[199]);
 //# sourceMappingURL=main.js.map
