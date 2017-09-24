@@ -18,7 +18,7 @@ export class StartPage {
 
   ionViewDidLoad() {
     this.setData();
-    setTimeout(() => this.navCtrl.setRoot(TabsPage), 2000)
+    setTimeout(() => this.navCtrl.setRoot(TabsPage), 3000)
   }
 
   setData() {

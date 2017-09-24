@@ -74,7 +74,7 @@ var StartPage = (function () {
     StartPage.prototype.ionViewDidLoad = function () {
         var _this = this;
         this.setData();
-        setTimeout(function () { return _this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_2__tabs_tabs__["a" /* TabsPage */]); }, 2000);
+        setTimeout(function () { return _this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_2__tabs_tabs__["a" /* TabsPage */]); }, 3000);
     };
     StartPage.prototype.setData = function () {
         var _this = this;
@@ -99,9 +99,10 @@ StartPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
         selector: 'page-start',template:/*ion-inline-start:"C:\Users\Abe\itin-app\src\pages\start\start.html"*/'<ion-content>\n<div class="start">\n  <div class="sk-circle">\n  <div class="sk-circle1 sk-child"></div>\n  <div class="sk-circle2 sk-child"></div>\n  <div class="sk-circle3 sk-child"></div>\n  <div class="sk-circle4 sk-child"></div>\n  <div class="sk-circle5 sk-child"></div>\n  <div class="sk-circle6 sk-child"></div>\n  <div class="sk-circle7 sk-child"></div>\n  <div class="sk-circle8 sk-child"></div>\n  <div class="sk-circle9 sk-child"></div>\n  <div class="sk-circle10 sk-child"></div>\n  <div class="sk-circle11 sk-child"></div>\n  <div class="sk-circle12 sk-child"></div>\n</div>\n</div>\n</ion-content>\n'/*ion-inline-end:"C:\Users\Abe\itin-app\src\pages\start\start.html"*/,
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_5__angular_http__["a" /* Http */], __WEBPACK_IMPORTED_MODULE_3__services_flight_service__["a" /* FlightService */], __WEBPACK_IMPORTED_MODULE_4__services_trip_service__["a" /* TripService */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavParams */]])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_5__angular_http__["a" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__angular_http__["a" /* Http */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__services_flight_service__["a" /* FlightService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__services_flight_service__["a" /* FlightService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_4__services_trip_service__["a" /* TripService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__services_trip_service__["a" /* TripService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavParams */]) === "function" && _e || Object])
 ], StartPage);
 
+var _a, _b, _c, _d, _e;
 //# sourceMappingURL=start.js.map
 
 /***/ }),
